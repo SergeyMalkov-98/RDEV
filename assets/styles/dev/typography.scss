@@ -1,0 +1,43 @@
+@mixin font($size, $weight, $lineHeight, $namespace: null, $onlyVars: false) {
+  @if ($namespace) {
+    @if ($onlyVars) {
+      --#{$namespace}-font-size: #{$size};
+      --#{$namespace}-font-weight: #{$weight};
+      --#{$namespace}-line-height: #{$lineHeight};
+    } @else {
+      font-size: var(--#{$namespace}-font-size, $size);
+      font-weight: var(--#{$namespace}-font-weight, $weight);
+      line-height: var(--#{$namespace}-line-height, $lineHeight);
+    }
+  } @else {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lineHeight;
+  }
+}
+
+@mixin h1($namespace: null, $onlyVars: false) {
+  @include font(64px, 300, 76.8px, $namespace, $onlyVars);
+}
+@mixin h2($namespace: null, $onlyVars: false) {
+  @include font(24px, 300, 31.2px, $namespace, $onlyVars);
+}
+
+@mixin txt-l($namespace: null, $onlyVars: false) {
+  @include font(20px, 400, 28px, $namespace, $onlyVars);
+}
+
+@mixin txt-m($namespace: null, $onlyVars: false) {
+  @include font(16px, 500, 20.8px, $namespace, $onlyVars);
+}
+
+@mixin txt-m-m($namespace: null, $onlyVars: false) {
+  @include font(16px, 400, 22.4px, $namespace, $onlyVars);
+}
+
+@mixin txt-r($namespace: null, $onlyVars: false) {
+  @include font(14px, 400, 19.6px, $namespace, $onlyVars);
+}
+@mixin txt-r-m($namespace: null, $onlyVars: false) {
+  @include font(14px, 400, 21px, $namespace, $onlyVars);
+}

@@ -1,0 +1,12 @@
+@use "dev/colors" as *;
+
+:root {
+  --c-white: #{$c-white};
+  --c-black: #{$c-black};
+
+  --c-grey-400: #{$c-grey-400};
+  --c-grey-500: #{$c-grey-500};
+  --c-grey-600: #{$c-grey-600};
+
+  --c-green-700: #{$c-green-700};
+}
