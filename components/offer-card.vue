@@ -127,18 +127,6 @@ const props = defineProps({
     @include txt-m-m;
   }
 
-  &__button {
-    background: var(--c-green-700);
-    outline: none;
-    border: none;
-    width: 100%;
-    border-radius: 30px;
-    padding: 16px;
-    cursor: pointer;
-    @include txt-l;
-    color: var(--c-grey-600);
-  }
-
   &__link {
     background: var(--c-green-700);
     outline: none;
